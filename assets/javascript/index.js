@@ -51,7 +51,10 @@ $("#submit").on("click", function(event) {
         dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
-
+    $("#employeeName").val("");
+    $("#role").val("");
+    $("#monthlyRate").val("");
+    $("#startDate").val("");
 });
 
 
