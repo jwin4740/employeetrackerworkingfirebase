@@ -20,8 +20,19 @@ var monthsWorked = "";
 var monthlyRate = "";
 var total = "";
 
+$(document).ready(function() {
+    function keyeffect () {
+        $("#keysound")[0].play();
+    }
+    function fIntro() {
+        $("#theme")[0].volume = 0.2;
+        $("#theme")[0].play();
+    }
+    fIntro();
+   $(document).on("keyup", keyeffect);
 
 
+});
 
 $("#submit").on("click", function(event) {
     event.preventDefault();
@@ -29,9 +40,9 @@ $("#submit").on("click", function(event) {
     role = $("#role").val();
     startDate = ($("#startDate").val());
     monthlyRate = parseInt($("#monthlyRate").val());
-   
 
-    
+
+
 
     var a = moment();
     var b = moment(startDate);
@@ -74,15 +85,14 @@ function addToTable(employeeName, role, startDate, monthlyRate, monthsWorked, to
     var newTableEmployeeName = $("<td>" + employeeName + "</td>");
     var newTableRole = $("<td>" + role + "</td>");
     var newTableStartDate = $("<td>" + startDate + "</td>");
-     var newTableMonthsWorked = $("<td>" + monthsWorked + "</td>");
+    var newTableMonthsWorked = $("<td>" + monthsWorked + "</td>");
     var newTableMonthlyRate = $("<td>" + "$" + monthlyRate + "</td>");
-   
-    var newTableTotal = $("<td>" +  "$" + total + "</td>");
+
+    var newTableTotal = $("<td>" + "$" + total + "</td>");
 
     newTableRow.append(newTableEmployeeName);
     newTableRow.append(newTableRole);
     newTableRow.append(newTableStartDate);
-    newTableRow.append(newTableMonthsWorked);
     newTableRow.append(newTableMonthlyRate);
     newTableRow.append(newTableTotal);
 

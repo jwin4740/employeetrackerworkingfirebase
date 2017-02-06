@@ -26,20 +26,60 @@ body {
 
 .left {
     position: absolute;
-    top: 200px;
-    left: 150px;
+    top: 140px;
+    left: 165px;
     float: left;
-    width: 300px;
-    height: 150px;
+    padding: 10px;
     border: solid 2px black;
+    border-radius: 10px;
+    background-color: gray;
+    opacity: 0.8;
 }
 
 .right {
     float: right;
     position: absolute;
-    top: 100px;
-    right: 25px;
-    width: 430px;
-    height: 200px;
+    top: 0px;
+    left: 715px;
+    padding: 10px;
     border: solid 2px black;
+    border-radius: 10px;
+    background-color: gray;
+    opacity: 0.8;
+}
+
+.addheader{
+	margin: 5px;
+}
+
+.center{
+	text-align: center;
+}
+
+h4{
+	margin: 2px;
+}
+
+input{
+	height: 30px;
+	width: 250px;
+	border-radius: 5px;
+	margin-bottom: 7px;
+	font-size: 18px;
+	background-color: black;
+	font-weight: bolder;
+	color: yellow;
+	padding: 3px;
+}
+
+#submit{
+	margin-top: 6px;
+	height: 45px;
+	width: 260px;
+	border-radius: 5px;
+	background-color: black;
+	font-size: 20px;
+	font-weight: bolder;
+	color: red;
+	cursor: pointer;
 }
